@@ -1,6 +1,7 @@
 from fastapi import FastAPI
-
+from db.init_db import connector, cursor
 app = FastAPI()
+
 
 
 @app.get("/")
