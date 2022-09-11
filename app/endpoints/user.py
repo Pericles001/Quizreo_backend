@@ -1,4 +1,8 @@
-from fastapi import APIRouter
+from typing import List
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.models.user import UserModel, UserOrm
+from app.database.init_db import get_db
 
 router = APIRouter(
     prefix="/users",
@@ -7,12 +11,14 @@ router = APIRouter(
 )
 
 
-@router.get("/")
-async def get_users():
+@router.get("/", response_model=List[UserModel])
+async def get_users(db: Session = Depends(get_db)):
     """
     Method that returns all users from database
     :return:
     """
+    users = db.query(UserOrm).all()
+    return users
 
 
 @router.get("/{user_id}")
