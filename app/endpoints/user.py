@@ -26,7 +26,7 @@ async def get_users(db: Session = Depends(get_db)):
     return users
 
 
-@router.get("/{user_id}", response_model=List[UserModel], status_code=status.HTTP_302_FOUND)
+@router.get("/{user_id}", response_model=UserModel, status_code=status.HTTP_302_FOUND)
 async def get_user(user_id: int, db: Session = Depends(get_db)):
     """
     Method to get details about a given user
