@@ -26,9 +26,5 @@ def get_db():
 
 @app.get("/")
 async def root():
+    "Home route"
     return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
