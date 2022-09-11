@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
-from app.routes.api import router as api_router
-from app.database.init_db import engine, sessionLocal
+
+from app.database.init_db import engine, sessionLocal, get_db
 from app.models import user, quiz, survey, trial, party, answer
+from app.routes.api import router as api_router
 
 user.Base.metadata.create_all(bind=engine)
 quiz.Base.metadata.create_all(bind=engine)
@@ -26,13 +27,7 @@ app.add_middleware(
 app.include_router(api_router)
 
 
-def get_db():
-    db = sessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
+get_db()
 
 @app.get("/")
 async def root():
