@@ -1,8 +1,6 @@
 from pydantic import BaseModel
-from sqlalchemy import Column, Integer, String, TIMESTAMP, text
-
-from app.db.init_db import Base
-
+from sqlalchemy import Column, Integer, String, ForeignKey, text, TIMESTAMP
+from app.database.init_db import Base
 
 class UserOrm(Base):
     """

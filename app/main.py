@@ -1,8 +1,7 @@
-from fastapi import FastAPI, Depends
-# Create the tables in the database
-from sqlalchemy.orm import Session
-
-from app.db.init_db import sessionLocal, engine
+from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
+from app.routes.api import router as api_router
+from app.database.init_db import engine, sessionLocal
 from app.models import user, quiz, survey, trial, party, answer
 
 user.Base.metadata.create_all(bind=engine)
@@ -14,6 +13,18 @@ answer.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+origins = ["http://localhost:8005"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(api_router)
+
 
 def get_db():
     db = sessionLocal()
@@ -21,7 +32,6 @@ def get_db():
         yield db
     finally:
         db.close()
-
 
 
 @app.get("/")
