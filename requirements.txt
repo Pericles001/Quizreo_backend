@@ -25,6 +25,7 @@ httptools==0.2.0
 idna==3.3
 importlib-metadata==4.11.2
 importlib-resources==5.4.0
+inflect==5.6.2
 inflection==0.5.1
 iso8601==1.0.2
 itsdangerous==2.1.0
@@ -53,6 +54,7 @@ pypika-tortoise==0.1.5
 pyserial==3.5
 python-dotenv==0.19.2
 python-jose==3.3.0
+python-magic==0.4.27
 python-multipart==0.0.5
 python-slugify==6.1.1
 pytz==2022.1
