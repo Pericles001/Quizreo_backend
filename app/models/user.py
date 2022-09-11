@@ -1,6 +1,9 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, ForeignKey, text, TIMESTAMP
 from app.database.init_db import Base
+
 
 class UserOrm(Base):
     """
@@ -26,7 +29,7 @@ class UserModel(BaseModel):
     lastname: str
     email: str
     password: str
-    created_at: str
+    created_at: datetime
 
     class Config:
         """
@@ -35,8 +38,8 @@ class UserModel(BaseModel):
         orm_mode = True
 
 
-class UserInDB(UserModel):
-    """
-    User model with hashed password
-    """
-    hashed_password: str
+# class UserInDB(UserModel):
+#     """
+#     User model with hashed password
+#     """
+#     hashed_password: str
