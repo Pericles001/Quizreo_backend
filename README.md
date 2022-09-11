@@ -1,22 +1,27 @@
-# Quizreo_backend
-Backend application for quizreo application : API and services are stored there
-
+# PROJECT BENIN IMMAT API
 
 ## Description
 
-###  Technologies
+This is the fastapi backend for the Project QUIZREO
 
-* [python](https://www.python.org/)
-* [postgresql](https://www.postgresql.org/)
+To setup 
 
-### Architecture
+-- Run `python -m venv py_modules` to create a basic virtual environment
 
-###  Services
+-- Copy content of root file quick_aliases in py_modules/bin/activate
 
-###  API
+-- Run `source py_modules/bin/activate` to activate the created virtual environment
 
-## Usage
+-- Run `pip install -r requirements.txt` to install the dependancies
 
-## Contributing
+-- Be aware of platform specific bugs during the previous step. Solve them until it's alright 😆️
 
-## Authors
+-- Create a .env file at the project's root
+
+-- Copy in the content of .env.example file 
+
+-- Update the .env file according to your database credentials and other variables
+
+-- Run `fastapi:migrations:run` to create tables
+
+-- Run `fastapi:run to start the api server` and voila
