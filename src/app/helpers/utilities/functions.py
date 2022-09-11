@@ -66,13 +66,10 @@ def store_base64_file(file: str, storage_path: str):
     return file_location
 
 
-def set_profile_picture(model: Any, db: Session, file: UploadFile | str):
+def set_profile_picture(file: UploadFile | str):
     profiles_pictures_path = "public/uploads/profiles_pictures"
     file_path = store_uploaded_file(file, profiles_pictures_path) if isinstance(file, UploadFile) else store_base64_file(file, profiles_pictures_path)
-    model.profile_picture = file_path
-    db.add(model)
-    db.commit()
-    db.refresh(model)
+    return file_path
 
 def get_slug_from(string: str):
     return slugify(

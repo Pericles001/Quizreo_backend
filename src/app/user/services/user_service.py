@@ -24,15 +24,10 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         data = jsonable_encoder(create_user_schema)
         profile_picture = data.pop('profile_picture', None)
         new_user = self.model(**data)
+        if profile_picture is not None:
+            new_user.profile_picture = set_profile_picture(profile_picture)
         db.add(new_user)
         try:
-            if profile_picture is not None:
-                background_tasks.add_task(
-                    set_profile_picture, 
-                    new_user, 
-                    db, 
-                    profile_picture
-                )
             db.commit()
         except (IntegrityError, TypeError):
             db.rollback()
@@ -49,13 +44,10 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         *,
         user_slug: str,
         profile_picture: UploadFile | str,
-        background_tasks: BackgroundTasks,
     ) -> User:
         user = self.get_one_by_slug(db, slug=user_slug)
         if profile_picture != None:
-            background_tasks.add_task(
-                set_profile_picture, user, db, profile_picture
-            )
+            set_profile_picture(profile_picture)
         db.refresh(user)
         return user
 
