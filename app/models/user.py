@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, TIMESTAMP, text
 
 from app.db.init_db import Base
 
@@ -15,6 +15,7 @@ class UserOrm(Base):
     lastname = Column(String(50), nullable=False)
     email = Column(String(50), unique=True, nullable=False)
     password = Column(String(50), nullable=False)
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
 
 
 class UserModel(BaseModel):
@@ -27,6 +28,7 @@ class UserModel(BaseModel):
     lastname: str
     email: str
     password: str
+    created_at: str
 
     class Config:
         """

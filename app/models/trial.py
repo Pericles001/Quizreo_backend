@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, TIMESTAMP, text
 
 from app.db.init_db import Base
 
@@ -14,9 +14,10 @@ class TrialOrm(Base):
     type = Column(String(50), unique=True, nullable=False)
     time = Column(Integer, unique=True, nullable=False)
     settings = Column(Integer, unique=True, nullable=False)
-    quiz = Column(Integer, unique=True, nullable=False, foreign_key="quizzes.id")
-    survey = Column(Integer, unique=True, nullable=False, foreign_key="surveys.id")
+    quiz = Column(Integer, ForeignKey("quizzes.id"))
+    survey = Column(Integer, ForeignKey("surveys.id"))
     user_id = Column(Integer, ForeignKey("users.id"))
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
 
 
 class TrialModel(BaseModel):
@@ -31,6 +32,7 @@ class TrialModel(BaseModel):
     quiz: int
     survey: int
     user_id: int
+    created_at: str
 
     class Config:
         """
