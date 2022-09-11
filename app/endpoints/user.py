@@ -38,12 +38,18 @@ async def get_user(user_id: int, db: Session = Depends(get_db)):
     return user
 
 
-@router.post("/add")
-async def create_user():
+@router.post("/add", response_model=UserModel, status_code=status.HTTP_201_CREATED)
+async def create_user(new_user: UserModel, db: Session = Depends(get_db)):
     """
     Method to create new user in database
     :return:
     """
+    user = UserOrm(username=new_user.username, firstname=new_user.firstname, lastname=new_user.lastname,
+                   email=new_user.email, password=new_user.password)
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return user
 
 
 @router.put("/update")
