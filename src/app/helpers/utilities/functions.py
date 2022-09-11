@@ -59,7 +59,7 @@ def store_base64_file(file: str, storage_path: str):
         file_extension = file_type.split("/")[-1]
         file_location = f"{storage_path}/file{time.time()}.{file_extension}" 
     except:
-       raise HTTPException(400, "An error occured ! Your file is probably invalid") 
+       raise HTTPException(400, "An error occured ! Your file is probably invalid! Expecting a valid base64 file or Object of class UploadFile 🙂️") 
     os.makedirs(os.path.dirname(file_location), exist_ok=True)
     with open(file_location, "wb") as file_path: 
         file_path.write(recovered_file)

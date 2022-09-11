@@ -6,7 +6,6 @@ from src.app.helpers.utilities.functions import set_profile_picture
 from src.app.user.models.user_model import User
 from sqlalchemy.orm import Session
 from src.app.core.config import settings
-from sqlalchemy.exc import IntegrityError
 from fastapi.encoders import jsonable_encoder
 from src.app.user.schemas.create_user_shema import CreateUserSchema
 from src.app.user.schemas.update_user_schema import UpdateUserSchema

@@ -21,14 +21,9 @@ router = APIRouter(prefix="/auth", tags=[PathOperationTag.AUTH])
 def register_user(
     *,
     db: Session = Depends(database.get_db),
-    background_tasks: BackgroundTasks,
     createUserSchema: CreateUserSchema
 ) -> User:
-    user = user_service.create(
-        db,
-        create_user_schema=createUserSchema,
-        background_tasks=background_tasks
-    )
+    user = user_service.create(db,create_user_schema=createUserSchema)
     return user
 
 @router.post("/signin", response_model=SigninResponseSchema)
