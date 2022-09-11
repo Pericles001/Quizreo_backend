@@ -47,7 +47,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
     ) -> User:
         user = self.get_one_by_slug(db, slug=user_slug)
         if profile_picture != None:
-            set_profile_picture(profile_picture)
+            user.profile_picture = set_profile_picture(profile_picture)
         db.refresh(user)
         return user
 
