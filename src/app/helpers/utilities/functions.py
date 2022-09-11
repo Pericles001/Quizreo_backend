@@ -1,15 +1,9 @@
 from typing import Any, List
-import shutil
-import ntpath
-import time
+import shutil, ntpath, base64, time, os, magic
 from sqlalchemy.orm import Session
-from fastapi import Response, UploadFile
+from fastapi import Response, UploadFile, HTTPException
 from passlib.context import CryptContext
 from slugify import slugify
-import socket
-import fcntl
-import struct
-import base64
 
 
 crypto_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -50,15 +44,25 @@ def get_filename_from_filepath(filepath: str):
 def store_uploaded_file(file: UploadFile | str, storage_path: str):
     files_infos = get_file_name_and_extension(file.filename)
     file_location = f"{storage_path}/{files_infos['filename']}-{time.time()}.{files_infos['extension']}" 
+    os.makedirs(os.path.dirname(file_location), exist_ok=True)
     with open(file_location, "wb") as file_path:
         shutil.copyfileobj(file.file, file_path)
     return file_location
 
 def store_base64_file(file: str, storage_path: str):
-    file_location = f"{storage_path}/profile_picture-{time.time()}.jpg" 
-    with open(file_location, "wb") as file_path:
-        base64string = base64.b64encode(file.encode('utf-8', errors='strict'))
-        file_path.write(base64string)
+    try:
+        file_as_byte = str.encode(file)  
+        recovered_file = base64.b64decode(file_as_byte)
+        file_chunks = [recovered_file[i:i+2048] for i in range(0, len(recovered_file), 2048)]
+        first_2048_bytes = file_chunks[0]
+        file_type = magic.from_buffer(first_2048_bytes, mime=True)
+        file_extension = file_type.split("/")[-1]
+        file_location = f"{storage_path}/file{time.time()}.{file_extension}" 
+    except:
+       raise HTTPException(400, "An error occured ! Your file is probably invalid") 
+    os.makedirs(os.path.dirname(file_location), exist_ok=True)
+    with open(file_location, "wb") as file_path: 
+        file_path.write(recovered_file)
     return file_location
 
 
