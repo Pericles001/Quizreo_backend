@@ -1,27 +1,22 @@
-# PROJECT QUIZREO
+# Quizreo_backend
+Backend application for quizreo application : API and services are stored there
+
 
 ## Description
 
-This is the fastapi backend for the Project QUIZREO
+###  Technologies
 
-To setup 
+* [python](https://www.python.org/)
+* [postgresql](https://www.postgresql.org/)
 
--- Run `python -m venv py_modules` to create a basic virtual environment
+### Architecture
 
--- Copy content of root file quick_aliases in py_modules/bin/activate
+###  Services
 
--- Run `source py_modules/bin/activate` to activate the created virtual environment
+###  API
 
--- Run `pip install -r requirements.txt` to install the dependancies
+## Usage
 
--- Be aware of platform specific bugs during the previous step. Solve them until it's alright 😆️
+## Contributing
 
--- Create a .env file at the project's root
-
--- Copy in the content of .env.example file 
-
--- Update the .env file according to your database credentials and other variables
-
--- Run `fastapi:migrations:run` to create tables
-
--- Run `fastapi:run to start the api server` and voila
+## Authors
