@@ -1,5 +1,5 @@
 from typing import Any, List
-from fastapi import BackgroundTasks, HTTPException, status, UploadFile
+from fastapi import HTTPException, status, UploadFile
 from src.app.auth.schemas.signin_schema import SigninSchema
 from src.app.core.base_service import BaseService
 from src.app.helpers.utilities.functions import set_profile_picture
@@ -8,7 +8,6 @@ from sqlalchemy.orm import Session
 from src.app.core.config import settings
 from sqlalchemy.exc import IntegrityError
 from fastapi.encoders import jsonable_encoder
-import base64
 from src.app.user.schemas.create_user_shema import CreateUserSchema
 from src.app.user.schemas.update_user_schema import UpdateUserSchema
 
@@ -18,8 +17,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         self,
         db: Session,
         *,
-        create_user_schema: CreateUserSchema,
-        background_tasks: BackgroundTasks,
+        create_user_schema: CreateUserSchema
     ) -> User:
         data = jsonable_encoder(create_user_schema)
         profile_picture = data.pop('profile_picture', None)
@@ -29,11 +27,11 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         db.add(new_user)
         try:
             db.commit()
-        except (IntegrityError, TypeError):
+        except:
             db.rollback()
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"The user seems to have been already registered",
+                detail=f"An error occurred. Please go check what went wrong 🙂️",
             )
         db.refresh(new_user)
         return new_user
@@ -48,6 +46,15 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         user = self.get_one_by_slug(db, slug=user_slug)
         if profile_picture != None:
             user.profile_picture = set_profile_picture(profile_picture)
+        db.add(user)
+        try:
+            db.commit()
+        except:
+            db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"An error occurred. Please go check what went wrong 🙂️",
+            )
         db.refresh(user)
         return user
 
@@ -56,7 +63,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         if not user:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"User with phone number {phone} does not exist",
+                detail=f"User with phone number {phone} does not exist 🙂️",
             )
         return user
 
@@ -65,7 +72,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         if not user:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"User with email {email} does not exist",
+                detail=f"User with email {email} does not exist 🙂️",
             )
         return user
 
@@ -74,7 +81,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         if not user:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"User with username {username} does not exist",
+                detail=f"User with username {username} does not exist 🙂️",
             )
         return user
 
@@ -83,7 +90,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         if not user:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"User with slug {slug} does not exist",
+                detail=f"User with slug {slug} does not exist 🙂️",
             )
         return user
 
@@ -92,7 +99,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
         if not user:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"User with id {id} does not exist",
+                detail=f"User with id {id} does not exist 🙂️",
             )
         return user
 
@@ -107,7 +114,7 @@ class UserService(BaseService[User, CreateUserSchema, UpdateUserSchema]):
             or not user_credentials.password == open_api_user_password):
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"Open API user not found !",
+                detail=f"Open API user not found 🙂️ !",
             )
         else:
             return {
