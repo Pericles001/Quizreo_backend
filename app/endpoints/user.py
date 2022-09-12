@@ -52,17 +52,36 @@ async def create_user(new_user: UserModel, db: Session = Depends(get_db)):
     return user
 
 
-@router.put("/update")
-async def update_user():
+@router.put("/{user_id}", response_model=UserModel, status_code=status.HTTP_200_OK)
+async def update_user(user_id: int, edit_user: UserModel, db: Session = Depends(get_db)):
     """
     Method to update user in database
     :return:
     """
+    user = db.query(UserOrm).filter(UserOrm.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"User {user_id} not found")
+    user.username = edit_user.username
+    user.firstname = edit_user.firstname
+    user.lastname = edit_user.lastname
+    user.email = edit_user.email
+    user.password = edit_user.password
+    db.commit()
+    db.refresh(user)
+    return user
 
 
-@router.delete("/{user_id}/delete")
-async def delete_user():
+@router.delete("/{user_id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_user(user_id: int, db: Session = Depends(get_db)):
     """
-    Method that delete a user from database
+    Deletes a given user from database
+    :param user_id:
+    :param db:
     :return:
     """
+    user = db.query(UserOrm).filter(UserOrm.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"User {user_id} not found")
+    db.delete(user)
+    db.commit()
+    return "User deleted"
