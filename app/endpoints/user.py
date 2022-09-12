@@ -4,6 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from starlette import status
 
+from app.auth.helper import encrypt_str, decrypt_str
 from app.database.init_db import get_db
 from app.models.user import UserModel, UserOrm
 
@@ -24,6 +25,23 @@ async def get_users(db: Session = Depends(get_db)):
     if not users:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No users found")
     return users
+
+
+@router.get("/{user_name}/{user_password}", response_model=UserModel, status_code=status.HTTP_302_FOUND)
+async def get_user_uname(user_name, user_password, db: Session = Depends(get_db)):
+    """
+    Get a user by username
+    :param user_password:
+    :param user_name:
+    :param db:
+    :return:
+    """
+    user_password = encrypt_str(user_password)
+    user = db.query(UserOrm).filter(UserOrm.username == user_name,
+                                    UserOrm.password == decrypt_str(user_password)).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"User {user_name} not found")
+    return user
 
 
 @router.get("/{user_id}", response_model=UserModel, status_code=status.HTTP_302_FOUND)
