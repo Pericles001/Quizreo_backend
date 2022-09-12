@@ -56,56 +56,56 @@ Services provided by the API:
 * [reset_password](app/endpoints/auth/reset_password.py): reset the password of a user
 
 ####  User
-* [get_user](app/endpoints/user/get_user.py): get a user
-* [update_user](app/endpoints/user/update_user.py): update a user
-* [delete_user](app/endpoints/user/delete_user.py): delete a user
-* [get_users](app/endpoints/user/get_users.py): get all users
-* [get_user_by_username](app/endpoints/user/get_user_by_username.py): get a user by username
+* [get_user](app/endpoints/user.py): get a user
+* [update_user](app/endpoints/user.py): update a user
+* [delete_user](app/endpoints/user.py): delete a user
+* [get_users](app/endpoints/user.py): get all users
+* [get_user_by_username](app/endpoints/user.py): get a user by username
 
 ####  Quiz
-* [create_quiz](app/endpoints/quiz/create_quiz.py): create a quiz
-* [get_quiz](app/endpoints/quiz/get_quiz.py): get a quiz
-* [update_quiz](app/endpoints/quiz/update_quiz.py): update a quiz
-* [delete_quiz](app/endpoints/quiz/delete_quiz.py): delete a quiz
-* [get_quizzes](app/endpoints/quiz/get_quizzes.py): get all quizzes
-* [get_quiz_by_name](app/endpoints/quiz/get_quiz_by_name.py): get a quiz by name
-* [get_quiz_by_user](app/endpoints/quiz/get_quiz_by_user.py): get all quizzes of a user
+* [create_quiz](app/endpoints/quiz.py): create a quiz
+* [get_quiz](app/endpoints/quiz.py): get a quiz
+* [update_quiz](app/endpoints/quiz.py): update a quiz
+* [delete_quiz](app/endpoints/quiz.py): delete a quiz
+* [get_quizzes](app/endpoints/quiz.py): get all quizzes
+* [get_quiz_by_name](app/endpoints/quiz.py): get a quiz by name
+* [get_quiz_by_user](app/endpoints/quiz.py): get all quizzes of a user
 
 ####  Survey
-* [create_survey](app/endpoints/survey/create_survey.py): create a survey
-* [get_survey](app/endpoints/survey/get_survey.py): get a survey
-* [update_survey](app/endpoints/survey/update_survey.py): update a survey
-* [delete_survey](app/endpoints/survey/delete_survey.py): delete a survey
-* [get_surveys](app/endpoints/survey/get_surveys.py): get all surveys
-* [get_survey_by_name](app/endpoints/survey/get_survey_by_name.py): get a survey by name
-* [get_survey_by_user](app/endpoints/survey/get_survey_by_user.py): get all surveys of a user
+* [create_survey](app/endpoints/survey.py): create a survey
+* [get_survey](app/endpoints/survey.py): get a survey
+* [update_survey](app/endpoints/survey.py): update a survey
+* [delete_survey](app/endpoints/survey.py): delete a survey
+* [get_surveys](app/endpoints/survey.py): get all surveys
+* [get_survey_by_name](app/endpoints/survey.py): get a survey by name
+* [get_survey_by_user](app/endpoints/survey.py): get all surveys of a user
 
 ####  Answer
-* [create_answer](app/endpoints/answer/create_answer.py): create an answer
-* [get_answer](app/endpoints/answer/get_answer.py): get an answer
-* [update_answer](app/endpoints/answer/update_answer.py): update an answer
-* [delete_answer](app/endpoints/answer/delete_answer.py): delete an answer
-* [get_answers](app/endpoints/answer/get_answers.py): get all answers
-* [get_answer_by_user](app/endpoints/answer/get_answer_by_user.py): get all answers of a user
-* [get_answer_by_quiz](app/endpoints/answer/get_answer_by_quiz.py): get all answers of a quiz
+* [create_answer](app/endpoints/answer.py): create an answer
+* [get_answer](app/endpoints/answer.py): get an answer
+* [update_answer](app/endpoints/answer.py): update an answer
+* [delete_answer](app/endpoints/answer.py): delete an answer
+* [get_answers](app/endpoints/answer.py): get all answers
+* [get_answer_by_user](app/endpoints/answer.py): get all answers of a user
+* [get_answer_by_quiz](app/endpoints/answer.py): get all answers of a quiz
 
 ####  Party
-* [create_party](app/endpoints/party/create_party.py): create a party
-* [get_party](app/endpoints/party/get_party.py): get a party
-* [update_party](app/endpoints/party/update_party.py): update a party
-* [delete_party](app/endpoints/party/delete_party.py): delete a party
-* [get_parties](app/endpoints/party/get_parties.py): get all parties
-* [get_party_by_name](app/endpoints/party/get_party_by_name.py): get a party by name
-* [get_party_by_user](app/endpoints/party/get_party_by_user.py): get all parties of a user
+* [create_party](app/endpoints/party.py): create a party
+* [get_party](app/endpoints/party.py): get a party
+* [update_party](app/endpoints/party.py): update a party
+* [delete_party](app/endpoints/party.py): delete a party
+* [get_parties](app/endpoints/party.py): get all parties
+* [get_party_by_name](app/endpoints/party.py): get a party by name
+* [get_party_by_user](app/endpoints/party.py): get all parties of a user
 
 ### Trial
-* [create_trial](app/endpoints/trial/create_trial.py): create a trial
-* [get_trial](app/endpoints/trial/get_trial.py): get a trial
-* [update_trial](app/endpoints/trial/update_trial.py): update a trial
-* [delete_trial](app/endpoints/trial/delete_trial.py): delete a trial
-* [get_trials](app/endpoints/trial/get_trials.py): get all trials
-* [get_trial_by_name](app/endpoints/trial/get_trial_by_name.py): get a trial by name
-* [get_trial_by_user](app/endpoints/trial/get_trial_by_user.py): get all trials of a user
+* [create_trial](app/endpoints/trial.py): create a trial
+* [get_trial](app/endpoints/trial.py): get a trial
+* [update_trial](app/endpoints/trial.py): update a trial
+* [delete_trial](app/endpoints/trial.py): delete a trial
+* [get_trials](app/endpoints/trial.py): get all trials
+* [get_trial_by_name](app/endpoints/trial.py): get a trial by name
+* [get_trial_by_user](app/endpoints/trial.py): get all trials of a user
 
 ## Usage
 
