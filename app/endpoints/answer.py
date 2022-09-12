@@ -23,7 +23,7 @@ async def get_answers(db: Session = Depends(get_db)):
     answers = db.query(AnswerOrm).all()
     if not answers:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Answers not founc")
-        return answers
+    return answers
 
 
 @router.get("/{answer_id}", response_model=AnswerModel, status_code=status.HTTP_302_FOUND)
@@ -51,7 +51,7 @@ async def create_party(new_answer: AnswerModel, db: Session = Depends(get_db)):
     return answer
 
 
-@router.put("{answer_id}", response_model=AnswerModel, status_code=status.HTTP_200_OK)
+@router.put("/{answer_id}", response_model=AnswerModel, status_code=status.HTTP_200_OK)
 async def update_party(answer_id: int, edit_answer: AnswerModel, db: Session = Depends(get_db)):
     """
     Method to update answer in database
@@ -67,7 +67,7 @@ async def update_party(answer_id: int, edit_answer: AnswerModel, db: Session = D
     return answer
 
 
-@router.delete("{answer_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{answer_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_answer(answer_id: int, db: Session = Depends(get_db)):
     """
     Method that delete  answer from database

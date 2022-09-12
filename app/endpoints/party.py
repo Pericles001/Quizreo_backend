@@ -51,7 +51,7 @@ async def create_party(new_party: PartyModel, db: Session = Depends(get_db)):
     return party
 
 
-@router.put("{party_id}", response_model=PartyModel, status_code=status.HTTP_200_OK)
+@router.put("/{party_id}", response_model=PartyModel, status_code=status.HTTP_200_OK)
 async def update_party(party_id: int, edit_party: PartyModel, db: Session = Depends(get_db)):
     """
     Method to update party in database
@@ -67,7 +67,7 @@ async def update_party(party_id: int, edit_party: PartyModel, db: Session = Depe
     return party
 
 
-@router.delete("{party_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{party_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_party(party_id: int, db: Session = Depends(get_db)):
     """
     Method that delete a party from database
