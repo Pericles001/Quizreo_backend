@@ -1,7 +1,8 @@
 from datetime import datetime
 
 from pydantic import BaseModel
-from sqlalchemy import Column, Integer, String, ForeignKey, text, TIMESTAMP
+from sqlalchemy import Column, Integer, String, text, TIMESTAMP
+
 from app.database.init_db import Base
 
 
@@ -36,7 +37,6 @@ class UserModel(BaseModel):
         Pydantic config
         """
         orm_mode = True
-
 
 # class UserInDB(UserModel):
 #     """
