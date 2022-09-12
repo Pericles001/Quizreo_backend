@@ -11,7 +11,7 @@
 			"item": [
 				{
 					"name": "UPDATE A QUIZ",
-					"_postman_id": "0d9957e2-7bd4-4812-8539-51f5e2ab6f38",
+					"id": "0d9957e2-7bd4-4812-8539-51f5e2ab6f38",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -77,7 +77,7 @@
 				},
 				{
 					"name": "GET A QUIZ",
-					"_postman_id": "ad312d91-e4dd-4dfc-bd71-a5bf45708f76",
+					"id": "ad312d91-e4dd-4dfc-bd71-a5bf45708f76",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -125,7 +125,7 @@
 				},
 				{
 					"name": "GET QUIZZES",
-					"_postman_id": "922312f1-ab77-4164-ab88-c566fd186bfa",
+					"id": "922312f1-ab77-4164-ab88-c566fd186bfa",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -173,7 +173,7 @@
 				},
 				{
 					"name": "DELETE A QUIZ",
-					"_postman_id": "ec964704-d6f8-45e1-963f-89296721f986",
+					"id": "ec964704-d6f8-45e1-963f-89296721f986",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -217,7 +217,7 @@
 				},
 				{
 					"name": "CREATE A QUIZ",
-					"_postman_id": "6a39a4b6-1f04-4a2a-8130-9d23b1de8b62",
+					"id": "6a39a4b6-1f04-4a2a-8130-9d23b1de8b62",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -282,7 +282,7 @@
 					]
 				}
 			],
-			"_postman_id": "0f9003b8-049e-446e-9572-f4797b8f6737",
+			"id": "0f9003b8-049e-446e-9572-f4797b8f6737",
 			"description": "Quizzes are resources used to create a party of type quiz"
 		},
 		{
@@ -290,7 +290,7 @@
 			"item": [
 				{
 					"name": "GET ANSWERS",
-					"_postman_id": "f011e24b-adfe-47c3-828c-34929d3a5b0d",
+					"id": "f011e24b-adfe-47c3-828c-34929d3a5b0d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -338,7 +338,7 @@
 				},
 				{
 					"name": "GET  ANSWER",
-					"_postman_id": "dc0900ed-9c0e-408f-ad6d-12f9d264314c",
+					"id": "dc0900ed-9c0e-408f-ad6d-12f9d264314c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -386,7 +386,7 @@
 				},
 				{
 					"name": "UPDATE ANSWER",
-					"_postman_id": "f0010c72-927d-48ed-b368-b3d86d4a0308",
+					"id": "f0010c72-927d-48ed-b368-b3d86d4a0308",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -452,7 +452,7 @@
 				},
 				{
 					"name": "DELETE ANSWER",
-					"_postman_id": "bf5a2c3d-74f4-4131-ad1c-9c9000813e81",
+					"id": "bf5a2c3d-74f4-4131-ad1c-9c9000813e81",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -500,7 +500,7 @@
 				},
 				{
 					"name": "CREATE ANSWER",
-					"_postman_id": "bb2b8d0b-54ee-4cd6-92e6-87b75f3229bb",
+					"id": "bb2b8d0b-54ee-4cd6-92e6-87b75f3229bb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -565,7 +565,7 @@
 					]
 				}
 			],
-			"_postman_id": "50120b83-ddd7-4e33-9858-75bbc4cffe95",
+			"id": "50120b83-ddd7-4e33-9858-75bbc4cffe95",
 			"description": "Answers are resources that represent answers to quizzes or surveys"
 		},
 		{
@@ -573,7 +573,7 @@
 			"item": [
 				{
 					"name": "CREATE TRIAL",
-					"_postman_id": "21d87197-3c8b-4c43-8620-3c3be074c091",
+					"id": "21d87197-3c8b-4c43-8620-3c3be074c091",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -620,7 +620,7 @@
 				},
 				{
 					"name": "GET A TRIAL",
-					"_postman_id": "bb06251f-c42d-42a5-8d8e-a8490605f5dc",
+					"id": "bb06251f-c42d-42a5-8d8e-a8490605f5dc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -667,7 +667,7 @@
 				},
 				{
 					"name": "UPDATE A TRIAL",
-					"_postman_id": "d2db3656-aca9-4670-a56b-da4b100d1e61",
+					"id": "d2db3656-aca9-4670-a56b-da4b100d1e61",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -732,7 +732,7 @@
 				},
 				{
 					"name": "DELETE A TRIAL",
-					"_postman_id": "5340a5c2-5feb-4355-83f6-6e0c2069a37f",
+					"id": "5340a5c2-5feb-4355-83f6-6e0c2069a37f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -745,7 +745,7 @@
 				},
 				{
 					"name": "CREATE A TRIAL",
-					"_postman_id": "60eb280c-72fb-4730-ba77-7cd157c23ca2",
+					"id": "60eb280c-72fb-4730-ba77-7cd157c23ca2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -809,14 +809,14 @@
 					]
 				}
 			],
-			"_postman_id": "e5107cf6-48ca-4dcb-943c-1a0bc536bf6a"
+			"id": "e5107cf6-48ca-4dcb-943c-1a0bc536bf6a"
 		},
 		{
 			"name": "PARTIES",
 			"item": [
 				{
 					"name": "GET PARTIES",
-					"_postman_id": "cf472761-b812-4c22-9af1-fc49347cb8d3",
+					"id": "cf472761-b812-4c22-9af1-fc49347cb8d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -863,7 +863,7 @@
 				},
 				{
 					"name": "GET A PARTY",
-					"_postman_id": "357c98e5-7ff4-425a-9648-fd5800796b87",
+					"id": "357c98e5-7ff4-425a-9648-fd5800796b87",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -910,7 +910,7 @@
 				},
 				{
 					"name": "UPDATE PARTY",
-					"_postman_id": "a14db771-8998-4eb2-9c5f-9e15a1d1b9dc",
+					"id": "a14db771-8998-4eb2-9c5f-9e15a1d1b9dc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -975,7 +975,7 @@
 				},
 				{
 					"name": "CREATE A PARTY",
-					"_postman_id": "3250d965-2189-43f4-87ec-c37a5e70e5c5",
+					"id": "3250d965-2189-43f4-87ec-c37a5e70e5c5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1040,7 +1040,7 @@
 				},
 				{
 					"name": "DELETE A PARTY",
-					"_postman_id": "ef4c75e9-8b1a-480d-9f8b-68d0ab3118cc",
+					"id": "ef4c75e9-8b1a-480d-9f8b-68d0ab3118cc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1086,14 +1086,14 @@
 					]
 				}
 			],
-			"_postman_id": "3da5f65c-1c92-4f79-aa3a-400f4d2c8486"
+			"id": "3da5f65c-1c92-4f79-aa3a-400f4d2c8486"
 		},
 		{
 			"name": "SURVEYS",
 			"item": [
 				{
 					"name": "GET SURVEYS",
-					"_postman_id": "f0703ff4-fb16-46f1-a91d-d7eb8ecbeff6",
+					"id": "f0703ff4-fb16-46f1-a91d-d7eb8ecbeff6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1140,7 +1140,7 @@
 				},
 				{
 					"name": "GET A SURVEY",
-					"_postman_id": "6d3eba47-c771-461f-8c3c-9ab83e791b71",
+					"id": "6d3eba47-c771-461f-8c3c-9ab83e791b71",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1153,7 +1153,7 @@
 				},
 				{
 					"name": "UPDATE A SURVEY",
-					"_postman_id": "2c0f5e28-6b4d-400b-b230-e3873c0fc05c",
+					"id": "2c0f5e28-6b4d-400b-b230-e3873c0fc05c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1218,7 +1218,7 @@
 				},
 				{
 					"name": "DELETE A SURVEY",
-					"_postman_id": "ebaa861b-de5f-4c82-810b-71d4f34743e8",
+					"id": "ebaa861b-de5f-4c82-810b-71d4f34743e8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1261,7 +1261,7 @@
 				},
 				{
 					"name": "CREATE A SURVEY",
-					"_postman_id": "5696c8ae-22a0-45aa-a344-35198ff75c44",
+					"id": "5696c8ae-22a0-45aa-a344-35198ff75c44",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1325,14 +1325,14 @@
 					]
 				}
 			],
-			"_postman_id": "64cd96e2-a727-4f32-83cf-5e35e53630b7"
+			"id": "64cd96e2-a727-4f32-83cf-5e35e53630b7"
 		},
 		{
 			"name": "USERS",
 			"item": [
 				{
 					"name": "GET USERS",
-					"_postman_id": "e259e614-fea1-4579-9e35-c6d5939baef7",
+					"id": "e259e614-fea1-4579-9e35-c6d5939baef7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1379,7 +1379,7 @@
 				},
 				{
 					"name": "GET A USER",
-					"_postman_id": "7e5a6f90-006f-47a8-bd43-b7cb0e8e9dc4",
+					"id": "7e5a6f90-006f-47a8-bd43-b7cb0e8e9dc4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1459,7 +1459,7 @@
 				},
 				{
 					"name": "ADD A USER",
-					"_postman_id": "aa95c8e7-4e65-49d5-b800-db5ec008ea38",
+					"id": "aa95c8e7-4e65-49d5-b800-db5ec008ea38",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1524,7 +1524,7 @@
 				},
 				{
 					"name": "UPDATE A USER",
-					"_postman_id": "b43b501f-dd02-4004-84ba-73ac38f6f109",
+					"id": "b43b501f-dd02-4004-84ba-73ac38f6f109",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1589,7 +1589,7 @@
 				},
 				{
 					"name": "DELETE  A USER",
-					"_postman_id": "29bb3336-4a95-4a23-860c-6d45311e56fd",
+					"id": "29bb3336-4a95-4a23-860c-6d45311e56fd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1632,14 +1632,14 @@
 				},
 				{
 					"name": "GET A USER BY USERNAME",
-					"_postman_id": "e33c6e9b-4871-41fc-b486-f1b1f2b2a4c5",
+					"id": "e33c6e9b-4871-41fc-b486-f1b1f2b2a4c5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "127.0.0.1:8000/users/padjovi"
+						"url": "127.0.0.1:8000/users/padjovi/peri"
 					},
 					"response": [
 						{
@@ -1678,11 +1678,11 @@
 					]
 				}
 			],
-			"_postman_id": "8fe924cf-397b-428f-bbf0-f00284361b72"
+			"id": "8fe924cf-397b-428f-bbf0-f00284361b72"
 		},
 		{
 			"name": "ROOT",
-			"_postman_id": "ccda1ce9-8ba3-4ba2-80ce-c8b55b5e0bdc",
+			"id": "ccda1ce9-8ba3-4ba2-80ce-c8b55b5e0bdc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
