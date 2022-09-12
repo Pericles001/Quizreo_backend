@@ -137,4 +137,9 @@ If you want to see a demo of the various features follow these steps:
 
 ## Contributing
 
+If you wish to contribute to the application , you can fork the project and submit a pull request. If you find any bugs or have any suggestions, you can open an issue.
+
+
 ## Authors
+
+* [Pericles001](https://github.com/Pericles001)
