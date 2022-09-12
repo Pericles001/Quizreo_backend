@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from app.database.init_db import engine, get_db
+from app.auth.helper import encrypt_str, decrypt_str
 from app.models import user, quiz, survey, trial, party, answer
 from app.routes.api import router as api_router
 
@@ -27,7 +28,6 @@ app.add_middleware(
 app.include_router(api_router)
 
 get_db()
-
 
 @app.get("/")
 async def root():
