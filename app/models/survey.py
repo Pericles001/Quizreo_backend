@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, ForeignKey, text, TIMESTAMP
 
@@ -21,7 +23,7 @@ class SurveyModel(BaseModel):
     title: str
     content: str
     user_id: int
-    created_at: str
+    created_at: datetime
 
     class Config:
         """

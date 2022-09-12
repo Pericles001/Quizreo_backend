@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, ForeignKey, text, TIMESTAMP
 
@@ -26,9 +28,9 @@ class QuizModel(BaseModel):
     rate: int
     title: str
     content: str
-    answer: str
+    answer: int
     user_id: int
-    created_at: str
+    created_at: datetime
 
     class Config:
         """
