@@ -1,0 +1,1697 @@
+{
+	"info": {
+		"_postman_id": "8db81ea2-3848-406d-aed7-a938d7639336",
+		"name": "Quizreo",
+		"description": "Quizreo API aims to help understand and manage Quizreo application data operations for survey and quiz usage.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "QUIZZES",
+			"item": [
+				{
+					"name": "UPDATE A QUIZ",
+					"_postman_id": "0d9957e2-7bd4-4812-8539-51f5e2ab6f38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"rate\": 5,\r\n  \"title\": \"Deathloop\",\r\n  \"content\": \"What is my name ? \",\r\n  \"answer\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:18:31.664Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "/1",
+						"description": "Update a given quiz"
+					},
+					"response": [
+						{
+							"id": "2bb09c9e-b41f-4013-a710-44067cf46a9a",
+							"name": "UPDATE A QUIZ",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"rate\": 5,\r\n  \"title\": \"Deathloop\",\r\n  \"content\": \"What is my name ? \",\r\n  \"answer\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:18:31.664Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/quizzes/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:19:11 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "139"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 1,\n    \"rate\": 5,\n    \"title\": \"Deathloop\",\n    \"content\": \"What is my name ? \",\n    \"answer\": 1,\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:11:01.359487+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET A QUIZ",
+					"_postman_id": "ad312d91-e4dd-4dfc-bd71-a5bf45708f76",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/quizzes/1",
+						"description": "Get a quiz by id"
+					},
+					"response": [
+						{
+							"id": "f6cb7cd4-aa58-4e0e-9d39-07b3058e2384",
+							"name": "GET A QUIZ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/quizzes/1"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:21:01 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "139"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 1,\n    \"rate\": 5,\n    \"title\": \"Deathloop\",\n    \"content\": \"What is my name ? \",\n    \"answer\": 1,\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:11:01.359487+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET QUIZZES",
+					"_postman_id": "922312f1-ab77-4164-ab88-c566fd186bfa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/quizzes",
+						"description": "Get all quizzes from database"
+					},
+					"response": [
+						{
+							"id": "1e9bbe19-c788-4f8b-ab94-1e6b208a0c2e",
+							"name": "GET QUIZZES",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/quizzes"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:20:28 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "141"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 1,\n        \"rate\": 5,\n        \"title\": \"Deathloop\",\n        \"content\": \"What is my name ? \",\n        \"answer\": 1,\n        \"user_id\": 1,\n        \"created_at\": \"2022-09-12T04:11:01.359487+01:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "DELETE A QUIZ",
+					"_postman_id": "ec964704-d6f8-45e1-963f-89296721f986",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:8000/quizzes/1",
+						"description": "Delete a quiz"
+					},
+					"response": [
+						{
+							"id": "8247e05d-8e65-4c79-b8eb-3b1c50feada2",
+							"name": "DELETE A QUIZ",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "127.0.0.1:8000/quizzes/1"
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:22:22 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "CREATE A QUIZ",
+					"_postman_id": "6a39a4b6-1f04-4a2a-8130-9d23b1de8b62",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"rate\": 0,\r\n  \"title\": \"What is my name ? \",\r\n  \"content\": \"Tell me my firstname\",\r\n  \"answer\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:10:23.536Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/quizzes/add",
+						"description": "Create a quiz"
+					},
+					"response": [
+						{
+							"id": "36f35e53-232e-4c19-b954-cb541685640a",
+							"name": "CREATE A QUIZ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 0,\r\n  \"rate\": 0,\r\n  \"title\": \"What is my name ? \",\r\n  \"content\": \"Tell me my firstname\",\r\n  \"answer\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:10:23.536Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/quizzes/add"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:24:41 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "150"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 2,\n    \"rate\": 0,\n    \"title\": \"What is my name ? \",\n    \"content\": \"Tell me my firstname\",\n    \"answer\": 1,\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:24:42.673612+01:00\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "0f9003b8-049e-446e-9572-f4797b8f6737",
+			"description": "Quizzes are resources used to create a party of type quiz"
+		},
+		{
+			"name": "ANSWERS",
+			"item": [
+				{
+					"name": "GET ANSWERS",
+					"_postman_id": "f011e24b-adfe-47c3-828c-34929d3a5b0d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/answers",
+						"description": "Get all answers from database"
+					},
+					"response": [
+						{
+							"id": "2bb380ba-56c6-40ff-a081-6f0fbe8b571e",
+							"name": "GET ANSWERS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/answers"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:26:53 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "89"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 1,\n        \"content\": \"Pericles\",\n        \"party\": 1,\n        \"created_at\": \"2022-09-12T04:07:31.545536+01:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET  ANSWER",
+					"_postman_id": "dc0900ed-9c0e-408f-ad6d-12f9d264314c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/answers/1",
+						"description": "Get answer by id"
+					},
+					"response": [
+						{
+							"id": "6c9c025f-14e3-435c-9c77-ccb9bb956cc9",
+							"name": "GET  ANSWER",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/answers/1"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:27:31 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"detail\": \"Party 2 not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ANSWER",
+					"_postman_id": "f0010c72-927d-48ed-b368-b3d86d4a0308",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"content\": \"Perez\",\r\n  \"party\": 1,\r\n  \"created_at\": \"2022-09-12T03:28:46.016Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/answers/1",
+						"description": "Update a answer"
+					},
+					"response": [
+						{
+							"id": "e37a1a36-e41f-43e6-9afd-d09726350adc",
+							"name": "UPDATE ANSWER",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"content\": \"Perez\",\r\n  \"party\": 1,\r\n  \"created_at\": \"2022-09-12T03:28:46.016Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/answers/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:29:48 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "84"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 1,\n    \"content\": \"Perez\",\n    \"party\": 1,\n    \"created_at\": \"2022-09-12T04:07:31.545536+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE ANSWER",
+					"_postman_id": "bf5a2c3d-74f4-4131-ad1c-9c9000813e81",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:8000/answers/2",
+						"description": "Delete answer"
+					},
+					"response": [
+						{
+							"id": "50e1747b-6585-4418-87bb-77d09949509d",
+							"name": "DELETE ANSWER",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "127.0.0.1:8000/answers/2"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:30:25 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"detail\": \"Party 2 not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE ANSWER",
+					"_postman_id": "bb2b8d0b-54ee-4cd6-92e6-87b75f3229bb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"content\": \"string\",\r\n  \"party\": 1,\r\n  \"created_at\": \"2022-09-12T03:32:42.962Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/answers/add",
+						"description": "Create answer"
+					},
+					"response": [
+						{
+							"id": "de848ee9-1bb3-420d-8ddd-7b59e974e611",
+							"name": "CREATE ANSWER",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 2,\r\n  \"content\": \"string\",\r\n  \"party\": 1,\r\n  \"created_at\": \"2022-09-12T03:32:42.962Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/answers/add"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:33:06 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "85"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 2,\n    \"content\": \"string\",\n    \"party\": 1,\n    \"created_at\": \"2022-09-12T04:33:07.009514+01:00\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "50120b83-ddd7-4e33-9858-75bbc4cffe95",
+			"description": "Answers are resources that represent answers to quizzes or surveys"
+		},
+		{
+			"name": "TRIALS",
+			"item": [
+				{
+					"name": "CREATE TRIAL",
+					"_postman_id": "21d87197-3c8b-4c43-8620-3c3be074c091",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/trials"
+					},
+					"response": [
+						{
+							"id": "eab6b961-21d9-458c-bcba-57db5c184bc0",
+							"name": "CREATE TRIAL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/trials"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 04:03:33 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "146"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 3,\n        \"title\": \"trial1\",\n        \"type\": \"survey\",\n        \"time\": 10,\n        \"settings\": 5,\n        \"quiz\": 2,\n        \"survey\": 5,\n        \"user_id\": 1,\n        \"created_at\": \"2022-09-12T05:01:17.984302+01:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET A TRIAL",
+					"_postman_id": "bb06251f-c42d-42a5-8d8e-a8490605f5dc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/trials/1"
+					},
+					"response": [
+						{
+							"id": "2165892a-1b32-4d55-b1d0-9fc4d9bd358d",
+							"name": "GET A TRIAL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/trials/1"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 04:05:17 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"detail\": \"Trial 1 not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE A TRIAL",
+					"_postman_id": "d2db3656-aca9-4670-a56b-da4b100d1e61",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 3,\r\n  \"title\": \"trial3\",\r\n  \"type\": \"survey\",\r\n  \"time\": 50,\r\n  \"settings\": 5,\r\n  \"quiz\": 2,\r\n  \"survey\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:59:23.173Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/trials/3"
+					},
+					"response": [
+						{
+							"id": "b064ed71-68e3-45f5-b9fa-a51279a3cc37",
+							"name": "UPDATA A TRIAL",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 3,\r\n  \"title\": \"trial3\",\r\n  \"type\": \"survey\",\r\n  \"time\": 50,\r\n  \"settings\": 5,\r\n  \"quiz\": 2,\r\n  \"survey\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:59:23.173Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/trials/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 04:07:08 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "144"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 3,\n    \"title\": \"trial3\",\n    \"type\": \"survey\",\n    \"time\": 50,\n    \"settings\": 5,\n    \"quiz\": 2,\n    \"survey\": 1,\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T05:01:17.984302+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE A TRIAL",
+					"_postman_id": "5340a5c2-5feb-4355-83f6-6e0c2069a37f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:8000/trials/1"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE A TRIAL",
+					"_postman_id": "60eb280c-72fb-4730-ba77-7cd157c23ca2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 6,\r\n  \"title\": \"New trial\",\r\n  \"type\": \"quiz\",\r\n  \"time\": 60,\r\n  \"settings\": 4,\r\n  \"quiz\": 2,\r\n  \"survey\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:59:23.173Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/trials/add"
+					},
+					"response": [
+						{
+							"id": "f2cb9366-a5bc-4d65-8fca-01e0d38663bd",
+							"name": "CREATE A TRIAL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 6,\r\n  \"title\": \"New trial\",\r\n  \"type\": \"quiz\",\r\n  \"time\": 60,\r\n  \"settings\": 4,\r\n  \"quiz\": 2,\r\n  \"survey\": 1,\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:59:23.173Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/trials/add"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 04:11:19 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "146"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 11,\n    \"title\": \"New trial\",\n    \"type\": \"quiz\",\n    \"time\": 60,\n    \"settings\": 4,\n    \"quiz\": 2,\n    \"survey\": 1,\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T05:11:19.984120+01:00\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "e5107cf6-48ca-4dcb-943c-1a0bc536bf6a"
+		},
+		{
+			"name": "PARTIES",
+			"item": [
+				{
+					"name": "GET PARTIES",
+					"_postman_id": "cf472761-b812-4c22-9af1-fc49347cb8d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/parties"
+					},
+					"response": [
+						{
+							"id": "592ad438-9440-4a38-b3b3-e3e3b7aeb498",
+							"name": "GET PARTIES",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/parties"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:34:54 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "89"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Partie 1\",\n        \"user_id\": 1,\n        \"created_at\": \"2022-09-12T04:06:39.625963+01:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET A PARTY",
+					"_postman_id": "357c98e5-7ff4-425a-9648-fd5800796b87",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/parties/1"
+					},
+					"response": [
+						{
+							"id": "ca7bc516-ce61-4a3b-b616-04715b06973c",
+							"name": "GET A PARTY",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/parties/1"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:35:40 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "87"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Partie 1\",\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:06:39.625963+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE PARTY",
+					"_postman_id": "a14db771-8998-4eb2-9c5f-9e15a1d1b9dc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"title\": \"string\",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:36:49.700Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/parties/1"
+					},
+					"response": [
+						{
+							"id": "61789569-9a23-49b3-b8b5-3581291e676c",
+							"name": "UPDATE PARTY",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"title\": \"string\",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:36:49.700Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/parties/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:38:02 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "85"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 1,\n    \"title\": \"string\",\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:06:39.625963+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CREATE A PARTY",
+					"_postman_id": "3250d965-2189-43f4-87ec-c37a5e70e5c5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"title\": \"relouuuh\",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:36:49.700Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/parties/add"
+					},
+					"response": [
+						{
+							"id": "1686c538-1021-406d-a575-f67eb9cacc4b",
+							"name": "CREATE A PARTY",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 0,\r\n  \"title\": \"relouuuh\",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:36:49.700Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/parties/add"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:39:30 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "87"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 4,\n    \"title\": \"relouuuh\",\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:39:31.569534+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE A PARTY",
+					"_postman_id": "ef4c75e9-8b1a-480d-9f8b-68d0ab3118cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:8000/parties/5"
+					},
+					"response": [
+						{
+							"id": "fc7fbcb1-7122-4ce9-9def-81d603fe0f67",
+							"name": "DELETE A PARTY",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "127.0.0.1:8000/parties/5"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:41:51 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"detail\": \"Party 5 not found\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "3da5f65c-1c92-4f79-aa3a-400f4d2c8486"
+		},
+		{
+			"name": "SURVEYS",
+			"item": [
+				{
+					"name": "GET SURVEYS",
+					"_postman_id": "f0703ff4-fb16-46f1-a91d-d7eb8ecbeff6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/surveys"
+					},
+					"response": [
+						{
+							"id": "991a7a5c-108e-485f-ad35-1253a25210a4",
+							"name": "GET SURVEYS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/surveys"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:45:25 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "239"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Test2\",\n        \"content\": \"Quel est votre age ? \",\n        \"user_id\": 1,\n        \"created_at\": \"2022-09-12T04:44:46.757739+01:00\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Test3\",\n        \"content\": \"Quel est votre nom ? \",\n        \"user_id\": 1,\n        \"created_at\": \"2022-09-12T04:45:05.763356+01:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET A SURVEY",
+					"_postman_id": "6d3eba47-c771-461f-8c3c-9ab83e791b71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/surveys/2"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE A SURVEY",
+					"_postman_id": "2c0f5e28-6b4d-400b-b230-e3873c0fc05c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"title\": \"Test03\",\r\n  \"content\": \"Quel est votre nom ? \",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:44:26.390Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/surveys/2"
+					},
+					"response": [
+						{
+							"id": "db9cb384-8a85-48b5-8cb5-4c48690d4b1b",
+							"name": "UPDATE A SURVEY",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"title\": \"Test03\",\r\n  \"content\": \"Quel est votre nom ? \",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:44:26.390Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/surveys/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:50:26 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "119"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 2,\n    \"title\": \"Test03\",\n    \"content\": \"Quel est votre nom ? \",\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:45:05.763356+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE A SURVEY",
+					"_postman_id": "ebaa861b-de5f-4c82-810b-71d4f34743e8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:8000/surveys/2"
+					},
+					"response": [
+						{
+							"id": "2d3fa92e-430e-4847-aa7b-e10083ed2bad",
+							"name": "DELETE A SURVEY",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "127.0.0.1:8000/surveys/2"
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:51:04 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "CREATE A SURVEY",
+					"_postman_id": "5696c8ae-22a0-45aa-a344-35198ff75c44",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"title\": \"Test5\",\r\n  \"content\": \"Quel est votre prenom ? \",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:44:26.390Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/surveys/add"
+					},
+					"response": [
+						{
+							"id": "dcdf47cb-57ac-4961-842e-ce47e3cfd4ae",
+							"name": "CREATE A SURVEY",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 4,\r\n  \"title\": \"Test5\",\r\n  \"content\": \"Quel est votre prenom ? \",\r\n  \"user_id\": 1,\r\n  \"created_at\": \"2022-09-12T03:44:26.390Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/surveys/add"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 03:57:40 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "121"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 5,\n    \"title\": \"Test5\",\n    \"content\": \"Quel est votre prenom ? \",\n    \"user_id\": 1,\n    \"created_at\": \"2022-09-12T04:57:41.247988+01:00\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "64cd96e2-a727-4f32-83cf-5e35e53630b7"
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "GET USERS",
+					"_postman_id": "e259e614-fea1-4579-9e35-c6d5939baef7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/users"
+					},
+					"response": [
+						{
+							"id": "aba130a6-68b3-4756-b02e-aa536f90b826",
+							"name": "GET USERS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/users"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 11 Sep 2022 14:00:41 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "21"
+								},
+								{
+									"key": "content-type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "Internal Server Error"
+						}
+					]
+				},
+				{
+					"name": "GET A USER",
+					"_postman_id": "7e5a6f90-006f-47a8-bd43-b7cb0e8e9dc4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/users/3"
+					},
+					"response": [
+						{
+							"id": "13f0590a-e2b9-4c8a-affe-599ce693bee0",
+							"name": "GET A USER",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/users/4"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 11 Sep 2022 14:54:51 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "21"
+								},
+								{
+									"key": "content-type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "Internal Server Error"
+						},
+						{
+							"id": "43dcdc82-5f4d-4bc8-9bc0-37264a1fd90a",
+							"name": "GET A USER",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/users/3"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 11 Sep 2022 22:02:24 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "163"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 3,\n    \"username\": \"mariadj\",\n    \"firstname\": \"Marina\",\n    \"lastname\": \"Glele\",\n    \"email\": \"glele@mari.com\",\n    \"password\": \"Mariadj\",\n    \"created_at\": \"2022-09-11T15:04:48.250194+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ADD A USER",
+					"_postman_id": "aa95c8e7-4e65-49d5-b800-db5ec008ea38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"username\": \"string\",\r\n  \"firstname\": \"string\",\r\n  \"lastname\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"created_at\": \"2022-09-11T22:26:55.690Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/users/add"
+					},
+					"response": [
+						{
+							"id": "8ed8a595-179f-4fc5-8d85-0730ba898a17",
+							"name": "ADD A USER",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 0,\r\n  \"username\": \"string\",\r\n  \"firstname\": \"string\",\r\n  \"lastname\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"created_at\": \"2022-09-11T22:26:55.690Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/users/add"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 11 Sep 2022 22:28:52 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "154"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 6,\n    \"username\": \"string\",\n    \"firstname\": \"string\",\n    \"lastname\": \"string\",\n    \"email\": \"string\",\n    \"password\": \"string\",\n    \"created_at\": \"2022-09-11T23:28:53.250061+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE A USER",
+					"_postman_id": "b43b501f-dd02-4004-84ba-73ac38f6f109",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 5,\r\n  \"username\": \"padj\",\r\n  \"firstname\": \"pe\",\r\n  \"lastname\": \"ad\",\r\n  \"email\": \"padj@gmail.com\",\r\n  \"password\": \"p\",\r\n  \"created_at\": \"2022-09-11T13:53:20.616219+01:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8000/users/5"
+					},
+					"response": [
+						{
+							"id": "a67391b5-0739-48b5-9cb1-bdeda52171af",
+							"name": "UPDATE A USER",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 5,\r\n  \"username\": \"padj\",\r\n  \"firstname\": \"pe\",\r\n  \"lastname\": \"ad\",\r\n  \"email\": \"padj@gmail.com\",\r\n  \"password\": \"p\",\r\n  \"created_at\": \"2022-09-11T13:53:20.616219+01:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "127.0.0.1:8000/users/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Sun, 11 Sep 2022 23:53:20 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "147"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 5,\n    \"username\": \"padj\",\n    \"firstname\": \"pe\",\n    \"lastname\": \"ad\",\n    \"email\": \"padj@gmail.com\",\n    \"password\": \"p\",\n    \"created_at\": \"2022-09-11T23:26:55.626133+01:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE  A USER",
+					"_postman_id": "29bb3336-4a95-4a23-860c-6d45311e56fd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:8000/users/3"
+					},
+					"response": [
+						{
+							"id": "2bb9db78-83d9-4806-a17b-1f050a4fde29",
+							"name": "DELETE  A USER",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "127.0.0.1:8000/users/3"
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 00:08:50 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "GET A USER BY USERNAME",
+					"_postman_id": "e33c6e9b-4871-41fc-b486-f1b1f2b2a4c5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8000/users/padjovi"
+					},
+					"response": [
+						{
+							"id": "adad8830-2f8e-42c6-8e87-f8956ba9ac42",
+							"name": "GET A USER BY USERNAME",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/users/padjovi"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 12 Sep 2022 15:25:33 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "153"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 1,\n    \"username\": \"padjovi\",\n    \"firstname\": \"peri\",\n    \"lastname\": \"adj\",\n    \"email\": \"p@gmail.com\",\n    \"password\": \"peri\",\n    \"created_at\": \"2022-09-11T13:53:20.616219+01:00\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "8fe924cf-397b-428f-bbf0-f00284361b72"
+		},
+		{
+			"name": "ROOT",
+			"_postman_id": "ccda1ce9-8ba3-4ba2-80ce-c8b55b5e0bdc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "127.0.0.1:8000/"
+			},
+			"response": []
+		}
+	]
+}
