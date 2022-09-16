@@ -1374,6 +1374,39 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "Internal Server Error"
+						},
+						{
+							"id": "2c5828ca-77c0-41ab-88ed-3d639d8aa951",
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "127.0.0.1:8000/users"
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Fri, 16 Sep 2022 10:04:45 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "644"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"pericles001\",\n        \"firstname\": \"Pericles\",\n        \"lastname\": \"Adjovi\",\n        \"email\": \"p@gmail.com\",\n        \"password\": \"padjovi\",\n        \"created_at\": \"2022-09-14T19:06:30.190550+01:00\"\n    },\n    {\n        \"id\": 2,\n        \"username\": \"string\",\n        \"firstname\": \"string\",\n        \"lastname\": \"string\",\n        \"email\": \"string\",\n        \"password\": \"string\",\n        \"created_at\": \"2022-09-14T23:31:26.459117+01:00\"\n    },\n    {\n        \"id\": 4,\n        \"username\": \"pericles01\",\n        \"firstname\": \"Peri\",\n        \"lastname\": \"Adjo\",\n        \"email\": \"j@gmail.com\",\n        \"password\": \"padjovi\",\n        \"created_at\": \"2022-09-15T00:12:10.172736+01:00\"\n    },\n    {\n        \"id\": 5,\n        \"username\": \"pericles0\",\n        \"firstname\": \"Per\",\n        \"lastname\": \"Adj\",\n        \"email\": \"jg@gmail.com\",\n        \"password\": \"padjovi\",\n        \"created_at\": \"2022-09-15T02:18:32.700060+01:00\"\n    }\n]"
 						}
 					]
 				},
